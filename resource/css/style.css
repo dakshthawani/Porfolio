@@ -1,0 +1,627 @@
+@import url('/resource/css/fonts/Panchang_Complete/Fonts/WEB/css/panchang.css');
+@import url('/resource/css/fonts/Melodrama_Complete/Fonts/WEB/css/melodrama.css');
+@import url('/resource/css/fonts/BespokeStencil_Complete/Fonts/WEB/css/bespoke-stencil.css');
+@import url('/resource/css/fonts/Nippo_Complete/Fonts/WEB/css/nippo.css');
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; 
+    overflow-x: hidden;
+}
+
+#hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at center, rgba(30, 31, 38, 0.8), rgba(18, 18, 18, 0.8)); 
+}
+
+.menu {
+    position: absolute; 
+    bottom: 30px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    display: flex; /* Flex display to align items */
+    gap: 100px; 
+    transition: all 0.3s ease; /* Smooth transition */
+    z-index: 10; /* Ensure it is above background */
+}
+
+.menu-content.fixed {
+    position: fixed; /* Fix the position when scrolling */
+    top: 0; /* Align at the top of the window */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    background-color: white; /* Optional: background for better visibility */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+}
+
+
+.hamburger {
+    display: none; /* Hide on larger screens */
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+    z-index: 100; /* Make sure it's above other content */
+}
+
+.menu-content {
+    display: flex; /* Default display for larger screens */
+    gap: 10px;
+}
+
+.menu-button {
+    display: flex; /* Default display for larger screens */
+    gap: 10px;
+    border: none; 
+    color: white; 
+    font-size: 1.5em; 
+    cursor: pointer;
+    padding: 15px 30px; 
+    background: transparent; /* Initial button background */
+    border: none; /* Remove button border */
+    color: inherit; /* Inherit color from menu */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for button */
+    font-family: Nippo-Extralight;
+}
+
+.menu-button:hover {
+    transform: scale(1.1); 
+    color: #FF6347; 
+}
+
+.menu-button:focus {
+    outline: none; 
+}
+
+@font-face {
+    font-family: 'Panchang';
+    src: url('fonts/Panchang_Complete/Fonts/WEB/fonts/Panchang-Light.woff2') format('woff2'),
+         url('fonts/Panchang_Complete/Fonts/WEB/fonts/Panchang-Light.woff') format('woff'),
+         url('fonts/Panchang_Complete/Fonts/WEB/fonts/Panchang-Light.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'Panchang', sans-serif;
+    font-size: 5rem; /* Adjust size as needed */
+    opacity: 0; /* Start invisible */
+    transform: translateY(50px); /* Start slightly below */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+#hero p {
+    font-size: 2rem; 
+    margin-bottom: 40px; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Slight text shadow */
+    font-family: 'BespokeStencil-Medium';
+}
+
+.about-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1f1f2e, #292944);
+    color: #fff;
+  }
+  
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .about-image {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+  }
+  
+  .about-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .about-content h2 {
+    font-family: 'Panchang', sans-serif;
+    font-size: 2.5rem;
+    color: #c3c3e6;
+    margin-bottom: 1rem;
+  }
+  
+  .about-content p {
+    font-size: 1rem;
+    color: #b5b5d6;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+  }
+  
+  .contact-button {
+    padding: 0.7rem 1.5rem;
+    background-color: #aab6f2;
+    color: #1f1f2e;
+    font-weight: 600;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .contact-button:hover {
+    background-color: #c3c3e6;
+    color: #1f1f2e;
+  }
+  
+
+h2 {
+    font-size: 2em; /* Heading size */
+    margin-bottom: 10px; /* Space below heading */
+    opacity: 0; /* Initial state for animation */
+    transform: translateY(-10px); /* Slide down effect */
+    animation: fadeInDown 0.6s forwards; /* Animation for heading */
+    animation-delay: 0.2s; /* Delay for heading animation */
+    font-family: 'Melodrama', serif; /* Updated font */
+}
+
+p {
+    font-size: 1em; /* Text size */
+    line-height: 1.6; /* Better readability */
+    opacity: 0; /* Initial state for animation */
+    transform: translateY(10px); /* Slide up effect */
+    animation: fadeInUp 0.6s forwards; /* Animation for paragraph */
+    animation-delay: 0.4s; /* Delay for paragraph animation */
+}
+
+/* Keyframe animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Slide to original position */
+    }
+}
+
+@keyframes fadeInDown {
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Slide to original position */
+    }
+}
+
+.projects-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1f1f2e, #292944);
+    color: #fff;
+  }
+  
+  .projects-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .projects-header h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    color: #c3c3e6;
+  }
+  
+  .projects-header p {
+    font-size: 1rem;
+    color: #b5b5d6;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    background: #1c1c30;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .project-info {
+    padding: 1.5rem;
+  }
+  
+  .project-info h3 {
+    font-size: 1.5rem;
+    color: #c3c3e6;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-info p {
+    font-size: 0.95rem;
+    color: #b5b5d6;
+    margin-bottom: 1rem;
+  }
+  
+  .project-link {
+    color: #aab6f2;
+    text-decoration: underline;
+    transition: color 0.3s;
+  }
+  
+  .project-link:hover {
+    color: #c3c3e6;
+  }
+  
+  
+  .filters {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .filter {
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .filter:hover {
+    background-color: #23527c;
+  }
+
+.contact-section {
+    background-color: #121212; /* Dark background */
+    color: white; /* Text color */
+    padding: 50px 20px;
+    text-align: center; /* Center text */
+    position: relative; /* For background effect */
+}
+
+.contact-section h2 {
+    font-size: 2em; /* Heading size */
+    margin-bottom: 30px; /* Space below heading */
+    opacity: 0; /* Initial state for animation */
+    transform: translateY(-10px); /* Slide down effect */
+    animation: fadeInDown 0.6s forwards; /* Animation for heading */
+    animation-delay: 0.2s; /* Delay for heading animation */
+}
+
+.contact-content {
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center content */
+    gap: 40px; /* Space between form and info */
+    max-width: 900px; /* Max width for content */
+    margin: 0 auto; /* Center the content */
+}
+
+.contact-form {
+    flex: 1; /* Allow the form to take available space */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack elements */
+    gap: 15px; /* Space between elements */
+    animation: fadeIn 0.6s forwards; /* Animation for form */
+    animation-delay: 0.4s; /* Delay for form animation */
+}
+
+.contact-info {
+    flex: 1; /* Allow the info section to take available space */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack elements */
+    justify-content: center; /* Center content vertically */
+    animation: fadeIn 0.6s forwards; /* Animation for info section */
+    animation-delay: 0.4s; /* Delay for info animation */
+}
+
+.form-group {
+    display: flex; /* Flexbox for label and input */
+    flex-direction: column; /* Stack label above input */
+    text-align: left; /* Align text to the left */
+}
+
+label {
+    font-weight: bold; /* Bold labels */
+}
+
+input, textarea {
+    padding: 10px; /* Inner padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #1e1e1e; /* Input background */
+    color: white; /* Text color */
+    font-size: 1em; /* Font size */
+}
+
+input:focus, textarea:focus {
+    outline: none; /* Remove outline on focus */
+    box-shadow: 0 0 5px #4CAF50; /* Glow effect on focus */
+}
+
+button {
+    padding: 10px; /* Inner padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #4CAF50; /* Button color */
+    color: white; /* Text color */
+    font-size: 1em; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.footer-section {
+    padding: 2rem;
+    background: linear-gradient(135deg, #1f1f2e, #292944);
+    color: #b5b5d6;
+    text-align: center;
+  }
+  
+  .footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .footer-title {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8rem;
+    color: #c3c3e6;
+  }
+  
+  .footer-description {
+    font-size: 1rem;
+    color: #b5b5d6;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .social-link a{
+    color: #aab6f2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .social-link:hover {
+    color: #c3c3e6;
+  }
+  
+  .footer-links {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #1e90ff;
+}
+
+.footer-copy {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+  .sticky-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #0f2027, #203a43); /* Matching your background */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000; /* Keep it on top */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+.sticky-menu button {
+    color: #ffffff; /* White text for contrast */
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem; /* Keep this consistent */
+    padding: 10px 15px; /* Add some padding for buttons */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sticky-menu button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+    border-radius: 5px; /* Slight rounding for the button */
+}
+.menu-title {
+    color: #ffffff;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+}
+.menu-button i {
+    margin-right: 8px; /* Space between icon and text */
+    color: #ffffff; /* Icon color */
+    transition: color 0.3s ease;
+}
+
+.menu-button:hover i {
+    color: #1e90ff; /* Change icon color on hover */
+}
+
+  
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Fade in */
+        transform: translateY(10px); /* Slide up effect */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Original position */
+    }
+}
+
+@keyframes fadeInDown {
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Slide to original position */
+    }
+}
+
+.contact-info h3 {
+    margin-top: 20px; /* Space above heading */
+}
+
+.contact-info p a {
+    color: #4CAF50; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.contact-info p a:hover {
+    color: #45a049; /* Darker green on hover */
+}
+
+
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px; /* Space inside the button */
+    margin-top: 20px; /* Space above the button */
+    background: #FF6347; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    font-size: 1.2rem; /* Font size */
+    transition: background 0.3s ease; /* Transition effect */
+}
+
+.cta-button:hover {
+    background: #FF4500; /* Darker shade on hover */
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5em; /* Smaller font size on smaller screens */
+    }
+
+    #hero p {
+        font-size: 1.2em; /* Smaller font size for description */
+    }
+
+    .menu {
+        display: none; /* Hide menu on mobile */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    .menu.open {
+        display: flex; /* Show the menu when opened */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; 
+        top: 60px; /* Position below the hamburger */
+        right: 20px; 
+        background: rgba(0, 0, 0, 0.8); /* Background for the dropdown */
+        padding: 20px; /* Padding for the menu */
+        border-radius: 8px; /* Rounded corners */
+        z-index: 10; /* Above other elements */
+    }
+
+    .menu-content {
+        display: flex; /* Default display for menu items */
+    }
+
+    .menu.open .menu-content {
+        display: flex; /* Show the menu content when opened */
+    }
+
+    .about-title {
+        font-size: 2.5rem; /* Adjust size for smaller screens */
+    }
+
+    .about-description {
+        font-size: 1rem; /* Smaller size for better fit */
+    }
+
+    #about {
+        padding: 40px 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 2em; /* Further reduced font size */
+    }
+
+    #hero p {
+        font-size: 1em; /* Further reduced description size */
+    }
+
+    .menu-button {
+        font-size: 0.9em; /* Even smaller button font size */
+    }
+}

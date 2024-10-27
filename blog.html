@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resource/css/blog_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+        }
+
+        .sticky-menu {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            z-index: 10;
+        }
+
+        .menu-title {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .menu-button {
+            background: none;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .menu-button:hover {
+            color: #1e90ff;
+        }
+
+        .blog-header {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            margin-top: 60px; /* to avoid being hidden by the sticky menu */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .blog-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .blog-post {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: scale(1.02);
+        }
+
+        .post-image {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .post-title {
+            margin: 10px 0;
+            font-size: 1.5rem;
+        }
+
+        .post-snippet {
+            margin: 10px 0;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #1e90ff;
+            color: #ffffff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .read-more:hover {
+            background: #0f76b6;
+        }
+
+        .blog-footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            position: relative;
+            margin-top: 20px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky-menu">
+        <div class="menu-title">Daksh Thawani</div>
+        <button class="menu-button" data-target="#projects">
+            <i class="fas fa-folder"></i> Projects
+        </button>
+        <button class="menu-button" data-target="#about">
+            <i class="fas fa-user"></i> About
+        </button>
+        <button class="menu-button" data-target="#contact">
+            <i class="fas fa-envelope"></i> Contact
+        </button>
+        <button class="menu-button" onclick="window.location.href='blog.html'">
+            <i class="fas fa-pencil-alt"></i> Blog
+        </button>
+    </div>
+
+    <header class="blog-header">
+        <h1>My Blog</h1>
+        <p>Insights, thoughts, and stories from my journey.</p>
+    </header>
+    
+    <main class="blog-container">
+        <article class="blog-post">
+            <img src="post1.jpg" alt="Blog Post 1" class="post-image">
+            <h2 class="post-title">Blog Post Title 1</h2>
+            <p class="post-snippet">This is a brief introduction to the first blog post. It covers the main points and invites the reader to read more.</p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
+        
+        <article class="blog-post">
+            <img src="post2.jpg" alt="Blog Post 2" class="post-image">
+            <h2 class="post-title">Blog Post Title 2</h2>
+            <p class="post-snippet">A quick overview of what this blog post is about, enticing readers to click through to the full article.</p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
+        
+        <article class="blog-post">
+            <img src="post3.jpg" alt="Blog Post 3" class="post-image">
+            <h2 class="post-title">Blog Post Title 3</h2>
+            <p class="post-snippet">An engaging snippet that summarizes the content and makes readers want to learn more.</p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
+        
+        <!-- Add more blog posts as needed -->
+    </main>
+
+    <footer class="blog-footer">
+        <div class="footer-content">
+            <p class="footer-description">Connect with me on social media for updates and insights.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/yourprofile" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/yourprofile" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <div class="footer-links">
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p>&copy; 2024 Daksh Thawani. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

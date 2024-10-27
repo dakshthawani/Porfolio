@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="resource/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+</head>
+<body>
+  <div id="hero">
+    <canvas id="bg"></canvas>
+    <h1>DAKSH THAWANI</h1>
+    <p>Creative Developer</p>
+    <div class="menu">
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div class="menu-content">
+            <button class="menu-button" data-target="#projects">Projects</button>
+            <button class="menu-button" data-target="#about">About</button>
+            <button class="menu-button" data-target="#contact">Contact</button>
+            <button class="menu-button" onclick="window.location.href='blog.html'">Blog</button>
+        </div>
+    </div>
+  </div>
+
+    <!-- Sticky Menu -->
+  <div class="sticky-menu" id="stickyMenu" style="display: none;">
+    <div class="menu-title">Daksh Thawani</div>
+    <button class="menu-button" data-target="#projects">
+      <i class="fas fa-folder"></i> Projects
+    </button>
+    <button class="menu-button" data-target="#about">
+      <i class="fas fa-user"></i> About
+    </button>
+    <button class="menu-button" data-target="#contact">
+      <i class="fas fa-envelope"></i> contact
+    </button>
+    <button class="menu-button" onclick="window.location.href='blog.html'">
+      <i class="fas fa-pencil-alt"></i> Blog
+    </button>
+  </div>
+
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="about-image" style="background-image: url('path/to/your-picture.jpg');"></div>
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm Daksh Thawani, a passionate web developer with expertise in full-stack development. 
+          I enjoy building responsive and user-friendly applications. My experience includes working with 
+          technologies like React, Node.js, and more. I’m eager to take on new challenges and continuously 
+          improve my skills.
+        </p>
+        <a href="#contact" class="contact-button">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+  
+  <section id="projects" class="projects-section">
+    <div class="projects-container">
+      <div class="projects-header">
+        <h2>My Projects</h2>
+        <p>Explore some of my recent work across different domains and technologies.</p>
+      </div>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-image" style="background-image: url('path/to/project1-image.jpg');"></div>
+          <div class="project-info">
+            <h3>Project Title 1</h3>
+            <p>A brief description of your project, highlighting its features and technologies used.</p>
+            <a href="#" class="project-link">View More</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image" style="background-image: url('path/to/project2-image.jpg');"></div>
+          <div class="project-info">
+            <h3>Project Title 2</h3>
+            <p>A brief description of your project, highlighting its features and technologies used.</p>
+            <a href="#" class="project-link">View More</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image" style="background-image: url('path/to/project3-image.jpg');"></div>
+          <div class="project-info">
+            <h3>Project Title 3</h3>
+            <p>A brief description of your project, highlighting its features and technologies used.</p>
+            <a href="#" class="project-link">View More</a>
+          </div>
+        </div>
+        <!-- Add more project cards here -->
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact" class="contact-section">
+    <div class="contact-wrapper" style="
+        display: flex; 
+        gap: 2rem; 
+        padding: 4rem; 
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        color: #ffffff;
+    ">
+      <!-- Contact Info -->
+      <div class="contact-info" style="flex: 1;">
+        <h2 style="font-family: 'Merriweather', serif; font-size: 2rem; margin-bottom: 1rem;">Get in Touch</h2>
+        <p style="font-family: 'Poppins', sans-serif; margin-bottom: 1.5rem;">
+          Feel free to reach out for any inquiries or collaborations!
+        </p>
+        <p style="margin-bottom: 1rem;"><strong>Address:</strong> 545 Mavis Island, Chicago, IL 99191</p>
+        <p style="margin-bottom: 1rem;"><strong>Phone:</strong> <a href="tel:+1234567890" style="color: #1e90ff;">+1 (555) 234-5678</a></p>
+        <p style="margin-bottom: 1rem;"><strong>Email:</strong> <a href="mailto:your-email@example.com" style="color: #1e90ff;">your-email@example.com</a></p>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrapper" style="flex: 1;">
+        <form class="contact-form" style="display: flex; flex-direction: column; gap: 1.2rem;">
+          <div style="display: flex; gap: 1rem;">
+            <input type="text" id="first-name" name="first-name" placeholder="First name" required style="
+                flex: 1; padding: 0.75rem; 
+                background: rgba(255, 255, 255, 0.1); 
+                border: 1px solid #555;
+                color: #ffffff;
+                border-radius: 5px;
+                backdrop-filter: blur(4px);
+                transition: background 0.3s ease, transform 0.3s ease;
+            ">
+            <input type="text" id="last-name" name="last-name" placeholder="Last name" required style="
+                flex: 1; padding: 0.75rem; 
+                background: rgba(255, 255, 255, 0.1); 
+                border: 1px solid #555;
+                color: #ffffff;
+                border-radius: 5px;
+                backdrop-filter: blur(4px);
+                transition: background 0.3s ease, transform 0.3s ease;
+            ">
+          </div>
+          <input type="email" id="email" name="email" placeholder="Email" required style="
+              padding: 0.75rem; 
+              background: rgba(255, 255, 255, 0.1); 
+              border: 1px solid #555;
+              color: #ffffff;
+              border-radius: 5px;
+              backdrop-filter: blur(4px);
+              transition: background 0.3s ease, transform 0.3s ease;
+          ">
+          <input type="tel" id="phone" name="phone" placeholder="Phone number" style="
+              padding: 0.75rem; 
+              background: rgba(255, 255, 255, 0.1); 
+              border: 1px solid #555;
+              color: #ffffff;
+              border-radius: 5px;
+              backdrop-filter: blur(4px);
+              transition: background 0.3s ease, transform 0.3s ease;
+          ">
+          <textarea id="message" name="message" placeholder="Message" rows="5" required style="
+              padding: 0.75rem; 
+              background: rgba(255, 255, 255, 0.1); 
+              border: 1px solid #555;
+              color: #ffffff;
+              border-radius: 5px;
+              backdrop-filter: blur(4px);
+              transition: background 0.3s ease, transform 0.3s ease;
+          "></textarea>
+          <button type="submit" style="
+              padding: 0.75rem; 
+              background: #1e90ff; 
+              color: #ffffff; 
+              border: none; 
+              border-radius: 5px;
+              font-family: 'Poppins', sans-serif;
+              font-weight: 600;
+              cursor: pointer;
+              transition: transform 0.3s ease;
+          ">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer-section">
+    <div class="footer-container">
+        <h3 class="footer-title">Daksh Thawani</h3>
+        <p class="footer-description">
+            Creative Developer | Open to collaboration and new opportunities.
+        </p>
+        <div class="social-links">
+            <a href="https://github.com" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a href="https://blog.com" target="_blank">
+                <i class="fas fa-blog"></i> Blog
+            </a>
+        </div>
+        <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <p class="footer-copy">© 2024 Daksh Thawani. All rights reserved.</p>
+    </div>
+</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="resource/js/index.js"></script>
+</body>
+</html>
