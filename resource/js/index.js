@@ -171,7 +171,19 @@ document.querySelectorAll('.menu-button').forEach(button => {
         }
     });
 });
+document.querySelectorAll('.contact-button').forEach(button => {
+    button.addEventListener('click', function() {
+        const targetID = button.getAttribute('data-target');
+        const targetSection = document.querySelector(targetID);
 
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start' // Align the top of the section to the top of the viewport
+            });
+        }
+    });
+});
 // Function to handle the reveal animation
 function revealSection(entries, observer) {
     entries.forEach(entry => {
