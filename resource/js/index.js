@@ -184,6 +184,7 @@ document.querySelectorAll('.contact-button').forEach(button => {
         }
     });
 });
+
 // Function to handle the reveal animation
 function revealSection(entries, observer) {
     entries.forEach(entry => {

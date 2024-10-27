@@ -150,7 +150,7 @@ h1 {
   }
   
   .about-content h2 {
-    font-family: 'Panchang', sans-serif;
+    font-family: 'Melodrama', serif;
     font-size: 2.5rem;
     color: #c3c3e6;
     margin-bottom: 1rem;
@@ -162,6 +162,7 @@ h1 {
     line-height: 1.7;
     max-width: 600px;
     margin: 0 auto 1.5rem;
+    font-family: 'Nippo-Extralight';
   }
   
   .contact-button {
@@ -232,6 +233,7 @@ p {
   }
   
   .projects-header p {
+    font-family: 'Nippo-Extralight';
     font-size: 1rem;
     color: #b5b5d6;
   }
@@ -268,12 +270,14 @@ p {
     font-size: 1.5rem;
     color: #c3c3e6;
     margin-bottom: 0.5rem;
+    font-family: 'BespokeStencil-Medium';
   }
   
   .project-info p {
     font-size: 0.95rem;
     color: #b5b5d6;
     margin-bottom: 1rem;
+    font-family: 'Nippo-Extralight';
   }
   
   .project-link {
@@ -320,6 +324,7 @@ p {
     transform: translateY(-10px); /* Slide down effect */
     animation: fadeInDown 0.6s forwards; /* Animation for heading */
     animation-delay: 0.2s; /* Delay for heading animation */
+    font-family: 'Panchang', sans-serif;
 }
 
 .contact-content {
@@ -493,6 +498,57 @@ button {
 
 .menu-button:hover i {
     color: #1e90ff; /* Change icon color on hover */
+}
+
+.skills-section {
+    padding: 100px 20px;
+    background-color: #111827;
+    color: #e5e7eb;
+    text-align: center;
+    position: relative;
+}
+
+.skills-content h2 {
+    font-size: 2.5rem;
+    color: #BAFF39;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skill-item {
+    background-color: #1F2937;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    color: #BAFF39;
+    margin-bottom: 10px;
+}
+
+.skill-item h3 {
+    color: #BAFF39;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.skill-item p {
+    font-size: 1rem;
+    color: #e5e7eb;
 }
 
   
