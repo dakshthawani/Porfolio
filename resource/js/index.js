@@ -117,31 +117,48 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-function toggleMenu() {
-    const menuContent = document.querySelector('.menu-content');
-    menuContent.classList.toggle('show');
-    }
-
-let lastScrollTop = 0;
-const stickyMenu = document.getElementById('stickyMenu');
-
-window.addEventListener('scroll', function() {
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (currentScroll > 800) { // Adjust the value to when you want the menu to appear
-        if (currentScroll > lastScrollTop) {
-            // Scrolling down
-            stickyMenu.style.display = 'flex'; // Show sticky menu
+    // function toggleMenu() {
+    //     const menuContent = document.querySelector('.menu-content');
+    //     if (menuContent.style.display === 'block') {
+    //         menuContent.style.display = 'none';
+    //     } else {
+    //         menuContent.style.display = 'block';
+    //     }
+    // }
+    
+    let lastScrollTop = 0;
+    const stickyMenu = document.getElementById('stickyMenu');
+    
+    window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+        // Check if the window width is greater than 768px (desktop)
+        if (window.innerWidth > 768) {
+            if (currentScroll > 800) { // Adjust the value to when you want the menu to appear
+                if (currentScroll > lastScrollTop) {
+                    // Scrolling down
+                    stickyMenu.style.display = 'flex'; // Show sticky menu
+                } else {
+                    // Scrolling up
+                    stickyMenu.style.display = 'none'; // Hide sticky menu
+                }
+            } else {
+                stickyMenu.style.display = 'none'; // Hide sticky menu if not scrolled past threshold
+            }
         } else {
-            // Scrolling up
-            stickyMenu.style.display = 'none'; // Hide sticky menu
+            // Ensure sticky menu is hidden on mobile
+            stickyMenu.style.display = 'none';
         }
-    } else {
-        stickyMenu.style.display = 'none'; // Hide sticky menu if not scrolled past threshold
-    }
-
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
-});
+    
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+    });
+    
+    // Initially hide the menu content on load
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuContent = document.querySelector('.menu-content');
+        menuContent.style.display = 'none'; // Ensure it's hidden on load
+    });
+    
 
     
 });
@@ -260,6 +277,7 @@ observer.observe(projectSection);
 
 // Function to toggle menu (if needed)
 function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('open'); // Toggle 'open' class to show/hide menu
+    const menuContent = document.getElementById('menuContent');
+    menuContent.classList.toggle('show'); // Toggle the 'show' class
 }
+

@@ -187,103 +187,105 @@
 </section>
 
   
-  <section id="contact" class="contact-section">
-    <div class="contact-wrapper" style="
-        display: flex; 
-        gap: 2rem; 
-        padding: 4rem; 
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
-        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4);
-        border-radius: 10px;
-        color: #ffffff;
-    ">
-      <!-- Contact Info -->
-      <div class="contact-info" style="flex: 1;">
-        <h2 style="font-family: 'Merriweather', serif; font-size: 2rem; margin-bottom: 1rem;">Get in Touch</h2>
-        <p style="font-family: 'Poppins', sans-serif; margin-bottom: 1.5rem;">
-          Feel free to reach out for any inquiries or collaborations!
-        </p>
-        <p style="margin-bottom: 1rem;"><strong>Address:</strong> Mahindra University, Hyderabad</p>
-        <p style="margin-bottom: 1rem;"><strong>Phone:</strong> <a href="tel:+1234567890" style="color: #1e90ff;">+91 800 572 8833</a></p>
-        <p style="margin-bottom: 1rem;"><strong>Email:</strong> <a href="mailto:your-email@example.com" style="color: #1e90ff;">dakshthawani70@gmail.com</a></p>
-        <a href="resource/Docx/Daksh_Thawani_CV.pdf" download style="
-                display: inline-block; 
-                padding: 0.75rem 1.5rem; 
-                background-color: #1e90ff; 
-                color: #ffffff; 
-                border-radius: 5px; 
-                text-decoration: none; 
-                font-weight: 600; 
-                transition: background-color 0.3s;">
-                Download Resume
-            </a>
-      </div>
-
-      <!-- Contact Form -->
-      <div class="contact-form-wrapper" style="flex: 1;">
-        <form class="contact-form" style="display: flex; flex-direction: column; gap: 1.2rem;">
-          <div style="display: flex; gap: 1rem;">
-            <input type="text" id="first-name" name="first-name" placeholder="First name" required style="
-                flex: 1; padding: 0.75rem; 
-                background: rgba(255, 255, 255, 0.1); 
-                border: 1px solid #555;
-                color: #ffffff;
-                border-radius: 5px;
-                backdrop-filter: blur(4px);
-                transition: background 0.3s ease, transform 0.3s ease;
-            ">
-            <input type="text" id="last-name" name="last-name" placeholder="Last name" required style="
-                flex: 1; padding: 0.75rem; 
-                background: rgba(255, 255, 255, 0.1); 
-                border: 1px solid #555;
-                color: #ffffff;
-                border-radius: 5px;
-                backdrop-filter: blur(4px);
-                transition: background 0.3s ease, transform 0.3s ease;
-            ">
-          </div>
-          <input type="email" id="email" name="email" placeholder="Email" required style="
-              padding: 0.75rem; 
-              background: rgba(255, 255, 255, 0.1); 
-              border: 1px solid #555;
-              color: #ffffff;
-              border-radius: 5px;
-              backdrop-filter: blur(4px);
-              transition: background 0.3s ease, transform 0.3s ease;
-          ">
-          <input type="tel" id="phone" name="phone" placeholder="Phone number" style="
-              padding: 0.75rem; 
-              background: rgba(255, 255, 255, 0.1); 
-              border: 1px solid #555;
-              color: #ffffff;
-              border-radius: 5px;
-              backdrop-filter: blur(4px);
-              transition: background 0.3s ease, transform 0.3s ease;
-          ">
-          <textarea id="message" name="message" placeholder="Message" rows="5" required style="
-              padding: 0.75rem; 
-              background: rgba(255, 255, 255, 0.1); 
-              border: 1px solid #555;
-              color: #ffffff;
-              border-radius: 5px;
-              backdrop-filter: blur(4px);
-              transition: background 0.3s ease, transform 0.3s ease;
-          "></textarea>
-          <button type="submit" style="
-              padding: 0.75rem; 
-              background: #1e90ff; 
+<section id="contact" class="contact-section">
+  <div class="contact-wrapper" style="
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 2rem; 
+      padding: 4rem; 
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
+      box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+      color: #ffffff;
+  ">
+    <!-- Contact Info -->
+    <div class="contact-info" style="margin-bottom: 2rem;">
+      <h2 style="font-family: 'Merriweather', serif; font-size: 2rem; margin-bottom: 1rem;">Get in Touch</h2>
+      <p style="font-family: 'Poppins', sans-serif; margin-bottom: 1.5rem;">
+        Feel free to reach out for any inquiries or collaborations!
+      </p>
+      <p style="margin-bottom: 1rem;"><strong>Address:</strong> Mahindra University, Hyderabad</p>
+      <p style="margin-bottom: 1rem;"><strong>Phone:</strong> <a href="tel:+1234567890" style="color: #1e90ff;">+91 800 572 8833</a></p>
+      <p style="margin-bottom: 1rem;"><strong>Email:</strong> <a href="mailto:your-email@example.com" style="color: #1e90ff;">dakshthawani70@gmail.com</a></p>
+      <a href="resource/Docx/Daksh_Thawani_CV.pdf" download style="
+              display: inline-block; 
+              padding: 0.75rem 1.5rem; 
+              background-color: #1e90ff; 
               color: #ffffff; 
-              border: none; 
-              border-radius: 5px;
-              font-family: 'Poppins', sans-serif;
-              font-weight: 600;
-              cursor: pointer;
-              transition: transform 0.3s ease;
-          ">Send Message</button>
-        </form>
-      </div>
+              border-radius: 5px; 
+              text-decoration: none; 
+              font-weight: 600; 
+              transition: background-color 0.3s;">
+              Download Resume
+          </a>
     </div>
-  </section>
+
+    <!-- Contact Form -->
+    <div class="contact-form-wrapper">
+      <form class="contact-form" style="display: flex; flex-direction: column; gap: 1.2rem;">
+        <div style="display: flex; gap: 1rem;">
+          <input type="text" id="first-name" name="first-name" placeholder="First name" required style="
+              flex: 1; padding: 0.75rem; 
+              background: rgba(255, 255, 255, 0.1); 
+              border: 1px solid #555;
+              color: #ffffff;
+              border-radius: 5px;
+              backdrop-filter: blur(4px);
+              transition: background 0.3s ease, transform 0.3s ease;
+          ">
+          <input type="text" id="last-name" name="last-name" placeholder="Last name" required style="
+              flex: 1; padding: 0.75rem; 
+              background: rgba(255, 255, 255, 0.1); 
+              border: 1px solid #555;
+              color: #ffffff;
+              border-radius: 5px;
+              backdrop-filter: blur(4px);
+              transition: background 0.3s ease, transform 0.3s ease;
+          ">
+        </div>
+        <input type="email" id="email" name="email" placeholder="Email" required style="
+            padding: 0.75rem; 
+            background: rgba(255, 255, 255, 0.1); 
+            border: 1px solid #555;
+            color: #ffffff;
+            border-radius: 5px;
+            backdrop-filter: blur(4px);
+            transition: background 0.3s ease, transform 0.3s ease;
+        ">
+        <input type="tel" id="phone" name="phone" placeholder="Phone number" style="
+            padding: 0.75rem; 
+            background: rgba(255, 255, 255, 0.1); 
+            border: 1px solid #555;
+            color: #ffffff;
+            border-radius: 5px;
+            backdrop-filter: blur(4px);
+            transition: background 0.3s ease, transform 0.3s ease;
+        ">
+        <textarea id="message" name="message" placeholder="Message" rows="5" required style="
+            padding: 0.75rem; 
+            background: rgba(255, 255, 255, 0.1); 
+            border: 1px solid #555;
+            color: #ffffff;
+            border-radius: 5px;
+            backdrop-filter: blur(4px);
+            transition: background 0.3s ease, transform 0.3s ease;
+        "></textarea>
+        <button type="submit" style="
+            padding: 0.75rem; 
+            background: #1e90ff; 
+            color: #ffffff; 
+            border: none; 
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        ">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
   
   <footer class="footer-section">
     <div class="footer-container">

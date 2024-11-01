@@ -55,25 +55,12 @@ body {
 
 
 .hamburger {
-    display: none; /* Hide on larger screens */
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-    position: absolute; 
-    top: 20px; 
-    right: 20px; 
-    z-index: 100; /* Make sure it's above other content */
+    display: none; /* Ensure it is displayed */
+    cursor: pointer; /* Optional: for better UX */
 }
 
 .menu-content {
-    display: none; /* Hide by default */
-    flex-direction: column; /* Stack vertically */
-    position: absolute; /* Position it relative to parent */
-    background: rgba(0, 0, 0, 0.8); /* Background for contrast */
-    width: 100%; /* Full width */
-    top: 50px; /* Below the hamburger */
-    left: 0;
-    padding: 10px 0;
+    display: none; /* Hide menu content by default */
   }
 
 .menu-content.show {
@@ -188,6 +175,11 @@ h1 {
   .contact-button:hover {
     background-color: #c3c3e6;
     color: #1f1f2e;
+  }
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Default to two columns */
+    gap: 2rem;
   }
   
 
@@ -338,7 +330,7 @@ p {
 
 .nav-button {
     position: absolute;
-    top: 50%;
+    top: 60%;
     font-size: 2rem;
     background: none;
     color: #fff;
@@ -748,18 +740,50 @@ canvas {
         gap: 30px; 
         padding: 20px; 
         background: rgba(255, 255, 255, 0.9);
-        position: absolute; 
+        position: relative; 
         left: 0; 
         right: 0; 
         top: 60px; 
+        display: none; /* Hide on mobile until toggled */
+    }
+
+    .menu-content.show {
+        display: flex; /* Show menu when toggled */
+    }
+    .menu-content {
+        display: none; /* Hide menu items by default on mobile */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Position absolute for dropdown */
+        top: 60px; /* Adjust based on your layout */
+        left: 50%;
+        transform: translateX(-50%); /* Center the dropdown */
+        background-color: #292944; /* Background for dropdown */
+        padding: 10px; /* Padding for the dropdown */
+        z-index: 15; /* Ensure dropdown is above other content */
+        width: 100%; /* Full width for dropdown */
+    }
+
+
+    .menu-button:hover {
+        background-color: #45a049; /* Darker green on hover */
     }
 
     .sticky-menu {
         display: none; /* Hide sticky menu */
       }
 
+      .navbar {
+        display: none; /* Optionally hide the standard navbar on mobile */
+    }
+
     .hamburger {
-        display: block; 
+        display: block; /* Hide the hamburger icon by default */
+        font-size: 2rem; /* Adjust the size as needed */
+        cursor: pointer; /* Pointer for better UX */
+        z-index: 20; /* Ensure it is above other content */
+        position: absolute;
+        top: 0;
+        color: white;
     }
 
     h1 {
@@ -798,6 +822,18 @@ canvas {
     .contact-button {
         padding: 0.5rem 1rem; 
         font-size: 0.9em; 
+    }
+    .contact-wrapper {
+        grid-template-columns: 1fr; /* Stack elements in one column */
+      }
+      
+    .contact-info {
+        order: 1; /* Make sure contact info is first */
+        margin-bottom: 2rem; /* Maintain gap between contact info and form */
+    }
+    
+    .contact-form-wrapper {
+        order: 2; /* Contact form comes second */
     }
     .footer-section {
         padding: 1rem; /* Adjust footer padding */
