@@ -108,44 +108,84 @@
     </div>
 </section>
 
+<section id="certifications" class="certifications-section">
+  <h2>Certifications</h2>
+  <div class="certifications-grid">
+      <!-- Certification Card 1 -->
+      <div class="certification-card" onclick="toggleDetails('cert1')">
+          <h3>Python Software Developer - RAT, Jaipur</h3>
+          <p>June 2024 – August 2024</p>
+          <button class="download-button" onclick="downloadCert(event, 'path/to/python-certification.pdf')">Download/View</button>
+          <div id="cert1" class="certification-details hidden">
+              <p><strong>Skills:</strong> Data structures, control flow, OOP, NumPy, Pandas, Flask, etc.</p>
+              <p><strong>Projects:</strong> Web-Scraping, ANN, Weather-Data-API, etc.</p>
+          </div>
+      </div>
+
+      <!-- Certification Card 2 -->
+      <div class="certification-card" onclick="toggleDetails('cert2')">
+          <h3>Full-Stack Developer - RAT, Jaipur</h3>
+          <p>June 2024 – August 2024</p>
+          <button class="download-button" onclick="downloadCert(event, 'path/to/fullstack-certification.pdf')">Download/View</button>
+          <div id="cert2" class="certification-details hidden">
+              <p><strong>Skills:</strong> HTML5, CSS3, JavaScript (ES6+), MongoDB, CRUD operations.</p>
+              <p><strong>Projects:</strong> Shopping-App TransitTribe, Trading-bot, etc.</p>
+          </div>
+      </div>
+
+      <!-- Certification Card 3 -->
+      <div class="certification-card" onclick="toggleDetails('cert3')">
+          <h3>Linux Administrator Program - IIHT, Jaipur</h3>
+          <p>July 2023 – August 2023</p>
+          <button class="download-button" onclick="downloadCert(event, 'path/to/linux-certification.pdf')">Download/View</button>
+          <div id="cert3" class="certification-details hidden">
+              <p><strong>Skills:</strong> Linux system configuration, shell scripting, network troubleshooting.</p>
+              <p><strong>Tools:</strong> systemd, firewalld, SELinux, etc.</p>
+          </div>
+      </div>
+  </div>
+</section>
 
 
-  
-  <section id="projects" class="projects-section">
-    <div class="projects-container">
+<section id="projects" class="projects-section">
+  <div class="projects-container">
       <div class="projects-header">
-        <h2>My Projects</h2>
-        <p>Explore some of my recent work across different domains and technologies.</p>
+          <h2>My Projects</h2>
+          <p>Explore some of my recent work across different domains and technologies.</p>
       </div>
-      <div class="project-grid">
-        <div class="project-card">
-          <div class="project-image" style="background-image: url('path/to/project1-image.jpg');"></div>
-          <div class="project-info">
-            <h3>Project Title 1</h3>
-            <p>A brief description of your project, highlighting its features and technologies used.</p>
-            <a href="#" class="project-link">View More</a>
+
+      <!-- Slider Wrapper -->
+      <div class="project-slider">
+          <div class="project-slide" style="background-image: url('path/to/project1-image.jpg');">
+              <div class="project-info">
+                  <h3>Project Title 1</h3>
+                  <p>A brief description of your project, highlighting its features and technologies used.</p>
+                  <a href="#" class="project-link">View More</a>
+              </div>
           </div>
-        </div>
-        <div class="project-card">
-          <div class="project-image" style="background-image: url('path/to/project2-image.jpg');"></div>
-          <div class="project-info">
-            <h3>Project Title 2</h3>
-            <p>A brief description of your project, highlighting its features and technologies used.</p>
-            <a href="#" class="project-link">View More</a>
+          <div class="project-slide" style="background-image: url('path/to/project2-image.jpg');">
+              <div class="project-info">
+                  <h3>Project Title 2</h3>
+                  <p>A brief description of your project, highlighting its features and technologies used.</p>
+                  <a href="#" class="project-link">View More</a>
+              </div>
           </div>
-        </div>
-        <div class="project-card">
-          <div class="project-image" style="background-image: url('path/to/project3-image.jpg');"></div>
-          <div class="project-info">
-            <h3>Project Title 3</h3>
-            <p>A brief description of your project, highlighting its features and technologies used.</p>
-            <a href="#" class="project-link">View More</a>
+          <div class="project-slide" style="background-image: url('path/to/project3-image.jpg');">
+              <div class="project-info">
+                  <h3>Project Title 3</h3>
+                  <p>A brief description of your project, highlighting its features and technologies used.</p>
+                  <a href="#" class="project-link">View More</a>
+              </div>
           </div>
-        </div>
-        <!-- Add more project cards here -->
+          <!-- Add more slides as needed -->
       </div>
-    </div>
-  </section>
+
+      <!-- Navigation buttons -->
+      <button id="prevBtn" class="nav-button">&#10094;</button>
+      <button id="nextBtn" class="nav-button">&#10095;</button>
+  </div>
+</section>
+
   
   <section id="contact" class="contact-section">
     <div class="contact-wrapper" style="

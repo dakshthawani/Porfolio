@@ -66,8 +66,18 @@ body {
 }
 
 .menu-content {
-    display: flex; /* Default display for larger screens */
-    gap: 10px;
+    display: none; /* Hide by default */
+    flex-direction: column; /* Stack vertically */
+    position: absolute; /* Position it relative to parent */
+    background: rgba(0, 0, 0, 0.8); /* Background for contrast */
+    width: 100%; /* Full width */
+    top: 50px; /* Below the hamburger */
+    left: 0;
+    padding: 10px 0;
+  }
+
+.menu-content.show {
+    display: flex; /* Show when toggled */
 }
 
 .menu-button {
@@ -216,79 +226,191 @@ p {
 }
 
 .projects-section {
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, #1f1f2e, #292944);
+    padding: 2rem;
+    background-color: #1f1f2e;
     color: #fff;
-  }
-  
-  .projects-header {
     text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .projects-header h2 {
-    font-family: 'Merriweather', serif;
-    font-size: 2.5rem;
-    color: #c3c3e6;
-  }
-  
-  .projects-header p {
-    font-family: 'Nippo-Extralight';
+}
+
+.projects-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.project-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%; /* Adjusts to the container’s width */
+}
+
+/* Project slide styling */
+.project-slide {
+    min-width: 100%;
+    height: 400px; /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center; /* Centers the card vertically */
+    justify-content: center; /* Centers the card horizontally */
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay to darken the background */
+.project-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+    transition: opacity 0.3s ease;
+}
+
+.project-slide:not(.active) {
+    opacity: 1; /* Ensures only the transform shifts it, without opacity changes */
+}
+
+/* Project details container */
+.project-info {
+    position: relative;
+    z-index: 2;
+    padding: 30px 20px;
+    max-width: 80%; /* Scales up the content */
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+/* Adjusting title and description to stand out */
+.project-info h3 {
+    font-size: 2rem; /* Larger title */
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.project-info p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #d1d1d1;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Button styling for 'View More' */
+.project-link {
+    display: inline-block;
+    padding: 10px 25px;
     font-size: 1rem;
-    color: #b5b5d6;
-  }
-  
-  .project-grid {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    background: #ff6b6b;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.project-link:hover {
+    background: #ff3b3b;
+    transform: scale(1.05);
+}
+
+/* Hover effects for immersive feel */
+.project-slide:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project-slide:hover::before {
+    opacity: 0.7;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transform: translateY(-50%);
+    transition: color 0.3s;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+.nav-button:hover {
+    color: #1e90ff;
+}
+
+
+  .certifications-section {
+    padding: 2rem;
+    background: #1f1f2e;
+    color: #fff;
+}
+
+.certifications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
-  }
-  
-  .project-card {
-    background: #1c1c30;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .project-image {
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .project-info {
-    padding: 1.5rem;
-  }
-  
-  .project-info h3 {
-    font-size: 1.5rem;
-    color: #c3c3e6;
-    margin-bottom: 0.5rem;
-    font-family: 'BespokeStencil-Medium';
-  }
-  
-  .project-info p {
-    font-size: 0.95rem;
+}
+
+.certification-card {
+    background: #292944;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.certification-card:hover {
+    background: #333366;
+}
+
+.certification-details {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
     color: #b5b5d6;
-    margin-bottom: 1rem;
-    font-family: 'Nippo-Extralight';
-  }
-  
-  .project-link {
-    color: #aab6f2;
-    text-decoration: underline;
-    transition: color 0.3s;
-  }
-  
-  .project-link:hover {
-    color: #c3c3e6;
-  }
+}
+
+.certification-details.hidden {
+    display: none; /* Ensure this hides the details by default */
+}
+
+.download-button {
+    background-color: #1e90ff;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.download-button:hover {
+    background-color: #1a7ccc;
+}
+
   
   
   .filters {
@@ -309,7 +431,7 @@ p {
     background-color: #23527c;
   }
 
-.contact-section {
+  .contact-section {
     background-color: #121212; /* Dark background */
     color: white; /* Text color */
     padding: 50px 20px;
@@ -329,7 +451,8 @@ p {
 
 .contact-content {
     display: flex; /* Flexbox for layout */
-    justify-content: center; /* Center content */
+    flex-direction: column; /* Stack vertically for smaller screens */
+    align-items: center; /* Center content */
     gap: 40px; /* Space between form and info */
     max-width: 900px; /* Max width for content */
     margin: 0 auto; /* Center the content */
@@ -388,53 +511,54 @@ button {
     transition: background-color 0.3s; /* Smooth transition for hover */
 }
 
+/* Footer styles */
 .footer-section {
     padding: 2rem;
     background: linear-gradient(135deg, #1f1f2e, #292944);
     color: #b5b5d6;
     text-align: center;
-  }
-  
-  .footer-container {
+}
+
+.footer-container {
     max-width: 800px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-  }
-  
-  .footer-title {
+}
+
+.footer-title {
     font-family: 'Merriweather', serif;
     font-size: 1.8rem;
     color: #c3c3e6;
-  }
-  
-  .footer-description {
+}
+
+.footer-description {
     font-size: 1rem;
     color: #b5b5d6;
     max-width: 600px;
     line-height: 1.6;
-  }
-  
-  .social-links {
+}
+
+.social-links {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
-  }
-  
-  .social-link a{
+}
+
+.social-link a {
     color: #aab6f2;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
-  }
-  
-  .social-link:hover {
+}
+
+.social-link:hover {
     color: #c3c3e6;
-  }
-  
-  .footer-links {
+}
+
+.footer-links {
     margin: 20px 0;
     display: flex;
     justify-content: center;
@@ -619,65 +743,85 @@ canvas {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    #hero h1 {
-        font-size: 2.5em; /* Smaller font size on smaller screens */
+    .menu {
+        flex-direction: column; 
+        gap: 30px; 
+        padding: 20px; 
+        background: rgba(255, 255, 255, 0.9);
+        position: absolute; 
+        left: 0; 
+        right: 0; 
+        top: 60px; 
+    }
+
+    .sticky-menu {
+        display: none; /* Hide sticky menu */
+      }
+
+    .hamburger {
+        display: block; 
+    }
+
+    h1 {
+        font-size: 3rem; 
     }
 
     #hero p {
-        font-size: 1.2em; /* Smaller font size for description */
+        font-size: 1.5rem; 
     }
 
-    .menu {
-        display: none; /* Hide menu on mobile */
+    .about-content h2 {
+        font-size: 2rem; 
     }
 
-    .hamburger {
-        display: block; /* Show hamburger on mobile */
+    .project-info h3 {
+        font-size: 1.25rem; 
     }
 
-    .menu.open {
-        display: flex; /* Show the menu when opened */
-        flex-direction: column; /* Stack items vertically */
-        position: absolute; 
-        top: 60px; /* Position below the hamburger */
-        right: 20px; 
-        background: rgba(0, 0, 0, 0.8); /* Background for the dropdown */
-        padding: 20px; /* Padding for the menu */
-        border-radius: 8px; /* Rounded corners */
-        z-index: 10; /* Above other elements */
+    .project-info p {
+        font-size: 0.9rem; 
+    } 
+
+    .contact-content {
+        flex-direction: column; /* Stack on smaller screens */
+        padding: 20px; /* Adjust padding */
     }
 
-    .menu-content {
-        display: flex; /* Default display for menu items */
+    .contact-section h2 {
+        font-size: 1.5em; /* Adjust heading size */
     }
 
-    .menu.open .menu-content {
-        display: flex; /* Show the menu content when opened */
+    .contact-form input, .contact-form textarea {
+        font-size: 0.9em; 
     }
 
-    .about-title {
-        font-size: 2.5rem; /* Adjust size for smaller screens */
+    .contact-button {
+        padding: 0.5rem 1rem; 
+        font-size: 0.9em; 
+    }
+    .footer-section {
+        padding: 1rem; /* Adjust footer padding */
     }
 
-    .about-description {
-        font-size: 1rem; /* Smaller size for better fit */
-    }
-
-    #about {
-        padding: 40px 10px; /* Adjust padding for smaller screens */
+    .footer-title {
+        font-size: 1.5rem; /* Adjust footer title size */
     }
 }
 
 @media (max-width: 480px) {
-    #hero h1 {
-        font-size: 2em; /* Further reduced font size */
+    h1 {
+        font-size: 2.5rem; 
     }
 
     #hero p {
-        font-size: 1em; /* Further reduced description size */
+        font-size: 1.2rem; 
     }
 
-    .menu-button {
-        font-size: 0.9em; /* Even smaller button font size */
+    .about-content h2 {
+        font-size: 1.8rem; 
+    }
+
+    .contact-section h2 {
+        font-size: 1.6em; 
     }
 }

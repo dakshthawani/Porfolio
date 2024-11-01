@@ -117,6 +117,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+function toggleMenu() {
+    const menuContent = document.querySelector('.menu-content');
+    menuContent.classList.toggle('show');
+    }
+
 let lastScrollTop = 0;
 const stickyMenu = document.getElementById('stickyMenu');
 
@@ -205,7 +210,34 @@ function revealSection(entries, observer) {
     });
 }
 
+let currentSlide = 0;
 
+const slides = document.querySelectorAll(".project-slide");
+const totalSlides = slides.length;
+const slider = document.querySelector(".project-slider");
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlidePosition();
+});
+
+document.getElementById("prevBtn").addEventListener("click", () => {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlidePosition();
+});
+
+function updateSlidePosition() {
+    const slideWidth = slides[0].clientWidth;
+    slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+}
+
+
+function downloadCert(event, path) {
+    event.stopPropagation(); // Prevents the card click from triggering
+    window.open(path, '_blank'); // Opens the certification in a new tab for viewing or downloading
+}
+
+  
 // Create an intersection observer
 const options = {
     root: null, // Use the viewport as the root
