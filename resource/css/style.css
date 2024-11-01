@@ -234,6 +234,10 @@ p {
     text-align: center;
 }
 
+.projects-header h2{
+    font-size: 2.5rem;
+}
+
 .projects-container {
     position: relative;
     overflow: hidden;
@@ -611,7 +615,7 @@ p {
 }
 
 .contact-header h2 {
-    font-family: 'Merriweather', serif;
+    font-family: 'Panchang', serif;
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
