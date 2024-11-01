@@ -38,10 +38,10 @@ body {
     bottom: 30px; 
     left: 50%;
     transform: translateX(-50%); 
-    display: flex; /* Flex display to align items */
+    display: flex; 
     gap: 100px; 
-    transition: all 0.3s ease; /* Smooth transition */
-    z-index: 10; /* Ensure it is above background */
+    transition: all 0.3s ease; 
+    z-index: 10; 
 }
 
 .menu-content.fixed {
@@ -162,27 +162,6 @@ h1 {
     font-family: 'Nippo-Extralight';
   }
   
-  .contact-button {
-    padding: 0.7rem 1.5rem;
-    background-color: #aab6f2;
-    color: #1f1f2e;
-    font-weight: 600;
-    border-radius: 25px;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .contact-button:hover {
-    background-color: #c3c3e6;
-    color: #1f1f2e;
-  }
-  .contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Default to two columns */
-    gap: 2rem;
-  }
-  
-
 h2 {
     font-size: 2em; /* Heading size */
     margin-bottom: 10px; /* Space below heading */
@@ -423,86 +402,6 @@ p {
     background-color: #23527c;
   }
 
-  .contact-section {
-    background-color: #121212; /* Dark background */
-    color: white; /* Text color */
-    padding: 50px 20px;
-    text-align: center; /* Center text */
-    position: relative; /* For background effect */
-}
-
-.contact-section h2 {
-    font-size: 2em; /* Heading size */
-    margin-bottom: 30px; /* Space below heading */
-    opacity: 0; /* Initial state for animation */
-    transform: translateY(-10px); /* Slide down effect */
-    animation: fadeInDown 0.6s forwards; /* Animation for heading */
-    animation-delay: 0.2s; /* Delay for heading animation */
-    font-family: 'Panchang', sans-serif;
-}
-
-.contact-content {
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Stack vertically for smaller screens */
-    align-items: center; /* Center content */
-    gap: 40px; /* Space between form and info */
-    max-width: 900px; /* Max width for content */
-    margin: 0 auto; /* Center the content */
-}
-
-.contact-form {
-    flex: 1; /* Allow the form to take available space */
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Stack elements */
-    gap: 15px; /* Space between elements */
-    animation: fadeIn 0.6s forwards; /* Animation for form */
-    animation-delay: 0.4s; /* Delay for form animation */
-}
-
-.contact-info {
-    flex: 1; /* Allow the info section to take available space */
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Stack elements */
-    justify-content: center; /* Center content vertically */
-    animation: fadeIn 0.6s forwards; /* Animation for info section */
-    animation-delay: 0.4s; /* Delay for info animation */
-}
-
-.form-group {
-    display: flex; /* Flexbox for label and input */
-    flex-direction: column; /* Stack label above input */
-    text-align: left; /* Align text to the left */
-}
-
-label {
-    font-weight: bold; /* Bold labels */
-}
-
-input, textarea {
-    padding: 10px; /* Inner padding */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    background-color: #1e1e1e; /* Input background */
-    color: white; /* Text color */
-    font-size: 1em; /* Font size */
-}
-
-input:focus, textarea:focus {
-    outline: none; /* Remove outline on focus */
-    box-shadow: 0 0 5px #4CAF50; /* Glow effect on focus */
-}
-
-button {
-    padding: 10px; /* Inner padding */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    background-color: #4CAF50; /* Button color */
-    color: white; /* Text color */
-    font-size: 1em; /* Font size */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s; /* Smooth transition for hover */
-}
-
 /* Footer styles */
 .footer-section {
     padding: 2rem;
@@ -667,6 +566,113 @@ button {
     color: #e5e7eb;
 }
 
+.contact-section {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 4rem 1rem; /* Reduced horizontal padding */
+    overflow: hidden; /* Prevent horizontal overflow */
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact-header h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-header p {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for horizontal layout */
+    gap: 2rem;
+}
+
+.contact-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.6s forwards; /* Animation for info section */
+    animation-delay: 0.4s; /* Delay for info animation */
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #1e90ff;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #1a74d4;
+}
+
+.contact-form-wrapper {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    animation: fadeIn 0.6s forwards; /* Animation for form */
+    animation-delay: 0.4s; /* Delay for form animation */
+}
+
+.form-group {
+    display: flex;
+    gap: 1rem;
+}
+
+input,
+textarea {
+    padding: 10px; /* Inner padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: white; /* Input background */
+    color: black; /* Text color */
+    font-size: 1em; /* Font size */
+}
+
+input:focus,
+textarea:focus {
+    outline: none; /* Remove outline on focus */
+    box-shadow: 0 0 5px #4CAF50; /* Glow effect on focus */
+}
+
+button {
+    padding: 0.75rem;
+    background: #1e90ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #1a74d4;
+}
   
 
 /* Keyframe animations */
@@ -688,19 +694,7 @@ button {
     }
 }
 
-.contact-info h3 {
-    margin-top: 20px; /* Space above heading */
-}
 
-.contact-info p a {
-    color: #4CAF50; /* Link color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Smooth transition for hover */
-}
-
-.contact-info p a:hover {
-    color: #45a049; /* Darker green on hover */
-}
 
 
 
@@ -772,15 +766,11 @@ canvas {
         display: none; /* Hide sticky menu */
       }
 
-      .navbar {
-        display: none; /* Optionally hide the standard navbar on mobile */
-    }
-
     .hamburger {
         display: block; /* Hide the hamburger icon by default */
         font-size: 2rem; /* Adjust the size as needed */
         cursor: pointer; /* Pointer for better UX */
-        z-index: 20; /* Ensure it is above other content */
+        z-index: 99999; /* Ensure it is above other content */
         position: absolute;
         top: 0;
         color: white;
@@ -806,34 +796,22 @@ canvas {
         font-size: 0.9rem; 
     } 
 
-    .contact-content {
-        flex-direction: column; /* Stack on smaller screens */
-        padding: 20px; /* Adjust padding */
+    .contact-section {
+        padding: 2.5rem 0rem; /* Reduced padding for mobile */
     }
-
-    .contact-section h2 {
-        font-size: 1.5em; /* Adjust heading size */
+    .contact-form-wrapper{
+        width: 83.6%;
     }
-
-    .contact-form input, .contact-form textarea {
-        font-size: 0.9em; 
+    input, textarea {
+        width: 100%;
+        padding: 7px;
     }
-
-    .contact-button {
-        padding: 0.5rem 1rem; 
-        font-size: 0.9em; 
+    .contact-info{
+        width: 83.6%;
     }
-    .contact-wrapper {
-        grid-template-columns: 1fr; /* Stack elements in one column */
-      }
-      
-    .contact-info {
-        order: 1; /* Make sure contact info is first */
-        margin-bottom: 2rem; /* Maintain gap between contact info and form */
-    }
-    
-    .contact-form-wrapper {
-        order: 2; /* Contact form comes second */
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack vertically on small screens */
+        padding: 0; /* Remove additional padding for mobile */
     }
     .footer-section {
         padding: 1rem; /* Adjust footer padding */
@@ -852,6 +830,10 @@ canvas {
     #hero p {
         font-size: 1.2rem; 
     }
+
+    .sticky-menu {
+        display: none; /* Hide sticky menu */
+      }
 
     .about-content h2 {
         font-size: 1.8rem; 

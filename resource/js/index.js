@@ -275,9 +275,14 @@ gsap.set(projectSection, { opacity: 0, y: 50 });
 observer.observe(aboutSection);
 observer.observe(projectSection);
 
-// Function to toggle menu (if needed)
-function toggleMenu() {
-    const menuContent = document.getElementById('menuContent');
-    menuContent.classList.toggle('show'); // Toggle the 'show' class
-}
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to toggle menu
+    function toggleMenu() {
+        const menuContent = document.getElementById('menuContent');
+        menuContent.classList.toggle('show'); // Toggle the 'show' class
+    }
+
+    // Assign the toggleMenu function to the hamburger click
+    document.querySelector('.hamburger').onclick = toggleMenu;
+});
 
