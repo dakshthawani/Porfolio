@@ -1,7 +1,7 @@
-@import url('/resource/css/fonts/Panchang_Complete/Fonts/WEB/css/panchang.css');
-@import url('/resource/css/fonts/Melodrama_Complete/Fonts/WEB/css/melodrama.css');
-@import url('/resource/css/fonts/BespokeStencil_Complete/Fonts/WEB/css/bespoke-stencil.css');
-@import url('/resource/css/fonts/Nippo_Complete/Fonts/WEB/css/nippo.css');
+@import url('resource/css/fonts/Panchang_Complete/Fonts/WEB/css/panchang.css');
+@import url('resource/css/fonts/Melodrama_Complete/Fonts/WEB/css/melodrama.css');
+@import url('resource/css/fonts/BespokeStencil_Complete/Fonts/WEB/css/bespoke-stencil.css');
+@import url('resource/css/fonts/Nippo_Complete/Fonts/WEB/css/nippo.css');
 
 
 body {
@@ -62,6 +62,7 @@ body {
 .menu-content {
     display: flex; /* Show on larger screens by default */
     flex-direction: row; /* Arrange buttons horizontally */
+    font-family: Nippo-Extralight;
 }
 
 .menu-content.show {
