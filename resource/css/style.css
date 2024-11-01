@@ -60,8 +60,9 @@ body {
 }
 
 .menu-content {
-    display: none; /* Hide menu content by default */
-  }
+    display: flex; /* Show on larger screens by default */
+    flex-direction: row; /* Arrange buttons horizontally */
+}
 
 .menu-content.show {
     display: flex; /* Show when toggled */
@@ -670,9 +671,9 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
+/* button:hover {
     background: #1a74d4;
-}
+} */
   
 
 /* Keyframe animations */
@@ -766,14 +767,15 @@ canvas {
         display: none; /* Hide sticky menu */
       }
 
-    .hamburger {
-        display: block; /* Hide the hamburger icon by default */
-        font-size: 2rem; /* Adjust the size as needed */
-        cursor: pointer; /* Pointer for better UX */
-        z-index: 99999; /* Ensure it is above other content */
+      .hamburger {
+        display: block; /* Show on small screens */
+        font-size: 2rem; 
+        cursor: pointer; 
+        z-index: 20; 
         position: absolute;
         top: 0;
-        color: white;
+        left: 10px; /* Adjust this value to position as needed */
+        color: white; /* Change color to ensure visibility */
     }
 
     h1 {

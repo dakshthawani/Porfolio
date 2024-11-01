@@ -278,9 +278,11 @@ observer.observe(projectSection);
 document.addEventListener("DOMContentLoaded", function() {
     // Function to toggle menu
     function toggleMenu() {
+        console.log("Hamburger clicked!"); // Debug line
         const menuContent = document.getElementById('menuContent');
-        menuContent.classList.toggle('show'); // Toggle the 'show' class
+        menuContent.classList.toggle('show');
     }
+    
 
     // Assign the toggleMenu function to the hamburger click
     document.querySelector('.hamburger').onclick = toggleMenu;
