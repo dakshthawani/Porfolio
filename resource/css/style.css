@@ -1,7 +1,7 @@
-@import url('resource/css/fonts/Panchang_Complete/Fonts/WEB/css/panchang.css');
-@import url('resource/css/fonts/Melodrama_Complete/Fonts/WEB/css/melodrama.css');
-@import url('resource/css/fonts/BespokeStencil_Complete/Fonts/WEB/css/bespoke-stencil.css');
-@import url('resource/css/fonts/Nippo_Complete/Fonts/WEB/css/nippo.css');
+@import url('/Porfolio/resource/css/fonts/Panchang_Complete/Fonts/WEB/css/panchang.css');
+@import url('/Porfolio/resource/css/fonts/Melodrama_Complete/Fonts/WEB/css/melodrama.css');
+@import url('/Porfolio/resource/css/fonts/BespokeStencil_Complete/Fonts/WEB/css/bespoke-stencil.css');
+@import url('/Porfolio/resource/css/fonts/Nippo_Complete/Fonts/WEB/css/nippo.css');
 
 
 body {
