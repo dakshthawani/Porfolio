@@ -1,7 +1,7 @@
-@import url('/Porfolio/resource/css/fonts/Panchang_Complete/Fonts/WEB/css/panchang.css');
+/* @import url('/Porfolio/resource/css/fonts/Panchang_Complete/Fonts/WEB/css/panchang.css');
 @import url('/Porfolio/resource/css/fonts/Melodrama_Complete/Fonts/WEB/css/melodrama.css');
 @import url('/Porfolio/resource/css/fonts/BespokeStencil_Complete/Fonts/WEB/css/bespoke-stencil.css');
-@import url('/Porfolio/resource/css/fonts/Nippo_Complete/Fonts/WEB/css/nippo.css');
+@import url('/Porfolio/resource/css/fonts/Nippo_Complete/Fonts/WEB/css/nippo.css'); */
 
 
 body {
@@ -62,7 +62,7 @@ body {
 .menu-content {
     display: flex; /* Show on larger screens by default */
     flex-direction: row; /* Arrange buttons horizontally */
-    font-family: Nippo-Extralight;
+    /* font-family: 'Nippo-Extralight'; */
 }
 
 .menu-content.show {
@@ -82,7 +82,7 @@ body {
     color: inherit; /* Inherit color from menu */
     cursor: pointer; /* Change cursor on hover */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for button */
-    font-family: Nippo-Extralight;
+    font-family: 'Nippo';
 }
 
 .menu-button:hover {
@@ -102,6 +102,35 @@ body {
     font-weight: lighter;
     font-style: normal;
 }
+/* Melodrama Font */
+@font-face {
+    font-family: 'Melodrama';
+    src: url('fonts/Melodrama_Complete/Fonts/WEB/fonts/Melodrama-Regular.woff2') format('woff2'),
+         url('fonts/Melodrama_Complete/Fonts/WEB/fonts/Melodrama-Regular.woff') format('woff'),
+         url('fonts/Melodrama_Complete/Fonts/WEB/fonts/Melodrama-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Bespoke Stencil Font */
+@font-face {
+    font-family: 'BespokeStencil';
+    src: url('fonts/BespokeStencil_Complete/Fonts/WEB/fonts/BespokeStencil-Medium.woff2') format('woff2'),
+         url('fonts/BespokeStencil_Complete/Fonts/WEB/fonts/BespokeStencil-Medium.woff') format('woff'),
+         url('fonts/BespokeStencil_Complete/Fonts/WEB/fonts/BespokeStencil-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Nippo Font */
+@font-face {
+    font-family: 'Nippo';
+    src: url('fonts/Nippo_Complete/Fonts/WEB/fonts/Nippo-Extralight.woff2') format('woff2'),
+         url('fonts/Nippo_Complete/Fonts/WEB/fonts/Nippo-Extralight.woff') format('woff'),
+         url('fonts/Nippo_Complete/Fonts/WEB/fonts/Nippo-Extralight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 h1 {
     font-family: 'Panchang', sans-serif;
@@ -115,7 +144,7 @@ h1 {
     font-size: 2rem; 
     margin-bottom: 40px; 
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Slight text shadow */
-    font-family: 'BespokeStencil-Medium';
+    font-family: 'BespokeStencil';
 }
 
 .about-section {
